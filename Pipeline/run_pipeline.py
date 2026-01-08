@@ -3,16 +3,16 @@ from Retrieval.retriever import Retriever
 from Verification.nli_model import NLIVerifier
 from Verification.verify_claims import verify_claim
 
-def run(answer_text):
+def run(answer_text, knowledge):
     claims = extract_claims(answer_text)
     retriever = Retriever()
     verifier = NLIVerifier()
 
     outputs = []
     for claim in claims:
-        evidence = retriever.retrieve(claim)
+        evidence = retriever.retrieve(knowledge, claim)
         verdict = verify_claim(claim,evidence,verifier)
-        outputs.append(verdict)
+        outputs.append((claim, verdict))
     
     return outputs
 
