@@ -11,6 +11,5 @@ Claim-level hallucination detection using retrieval-based verification on HaluEv
 
 ## Tech Stack
 - Python
-- FAISS
 - Sentence Transformers
 - HaluEval
