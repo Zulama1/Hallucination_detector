@@ -1,0 +1,10 @@
+{
+    "dataset": "HaluEval-QA",
+    "samples": 2500,
+    "model": "roberta-large-mnli",
+    "precision": 0.7325,
+    "recall": 0.8040,
+    "f1": 0.7666,
+    "roc_auc": 0.7552
+  }
+  
